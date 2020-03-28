@@ -14,6 +14,7 @@ void TOH(int n,int a ,int b, int c)
 int main()
 {
     int n;
+    cout<<"Enter the number of disks"<<endl;
     cin>>n;
     TOH(n,1,2,3);
     return 0;
