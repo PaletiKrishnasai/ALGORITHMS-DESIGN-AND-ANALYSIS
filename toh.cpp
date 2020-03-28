@@ -1,35 +1,25 @@
 #include<bits/stdc++.h>
 using namespace std;
-/*void TOH(int n,int a ,int b, int c)
-{
-    if(n>0)
-    {
-        TOH(n-1,a,c,b);
-        cout<<"move a disc from "<<a<<" to "<<c<<endl;
-        TOH(n-1,b,a,c);
-    }
-}*/
+int TOH(int n,int a ,int b, int c)
+{   int count=0;
 
-void TOH(int n,int a ,int b, int c)
-{
-	static int count=0;
     if(n>0)
     {
-        TOH(n-1,a,c,b);
-        //cout<<"move a disc from "<<a<<" to "<<c<<endl;
+     count=TOH(n-1,a,c,b);
+        cout<<"move a disc from "<<a<<" to "<<c<<endl;
         count++;
-        TOH(n-1,b,a,c);
+        count+=TOH(n-1,b,a,c);
     }
-    if(n==0)
-		cout<<count<<endl;
+    return count;
 }
+
 
 int main()
 {
     int n;
-    cout<<"Enter the number of disks"<<endl;
     cin>>n;
-    TOH(n,1,2,3);
+    cout<<TOH(n,1,2,3)<<endl;
+
     return 0;
 
 }
