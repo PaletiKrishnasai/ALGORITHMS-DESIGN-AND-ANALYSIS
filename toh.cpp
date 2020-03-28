@@ -17,8 +17,10 @@ int TOH(int n,int a ,int b, int c)
 int main()
 {
     int n;
+    cout<<"Enter the number of disks to be moved"<<endl;
     cin>>n;
-    cout<<TOH(n,1,2,3)<<endl;
+    cout<<"The sequence of steps to be taken is"<<endl;
+    cout<<endl<<"Total number of steps taken to move the disks is "<<TOH(n,1,2,3)<<endl;
 
     return 0;
 
