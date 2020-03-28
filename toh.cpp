@@ -6,9 +6,9 @@ int TOH(int n,int a ,int b, int c)
     if(n>0)
     {
      count=TOH(n-1,a,c,b);
-        cout<<"move a disc from "<<a<<" to "<<b<<endl;
+        cout<<"move a disc from "<<a<<" to "<<c<<endl;
         count++;
-        count+=TOH(n-1,c,b,a);
+        count+=TOH(n-1,b,a,c);
     }
     return count;
 }
